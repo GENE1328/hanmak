@@ -313,3 +313,53 @@ html,body{overflow-x:clip}
 .wtb-figure:after{background:linear-gradient(180deg,rgba(14,14,14,.25) 0,rgba(14,14,14,.35) 30%,rgba(14,14,14,.82) 62%,rgba(14,14,14,.94) 100%)}
 .wtb-overlay .display em{color:#e6ad98}
 .wtb-overlay .eyebrow{color:rgba(242,239,232,.85)}
+
+/* Manifesto stamp: HANMAK logo on a solid dark seal */
+.manifesto-stamp{background:#151515;border-color:#151515;box-shadow:0 18px 40px rgba(21,21,21,.18)}
+.manifesto-stamp:after{border-color:rgba(242,239,232,.38)}
+.manifesto-stamp-logo{width:68%;height:auto;display:block}
+.manifesto-stamp small{color:rgba(242,239,232,.8)}
+
+/* CTA band: PNG map takes the place of the decorative rings */
+.cta-band:before,.cta-band:after{display:none}
+.cta-band-map{position:absolute;right:max(0px,calc((100vw - 1200px)/2 - 40px));top:0;bottom:0;margin:auto 0;width:min(46vw,660px);height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0,#000 8%,#000 90%,transparent 100%);mask-composite:intersect;pointer-events:none}
+@media(max-width:900px){
+  .cta-band{flex-direction:column;align-items:stretch;justify-content:center;padding:56px 0 24px}
+  .cta-band-map{position:relative;right:auto;top:auto;bottom:auto;order:2;width:100%;max-width:520px;margin:28px auto 0}
+  .cta-band-inner{order:1}
+}
+
+/* Our Story: photo under "The Beginning" */
+.story-intro-side{display:grid;gap:clamp(32px,4vw,56px);align-content:start}
+.story-intro-photo{margin:0;overflow:hidden;aspect-ratio:3/2;background:#1b1b1b}
+.story-intro-photo img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* Our Story: Unity Mall photo behind the stall number */
+.story-stat{position:relative;overflow:hidden;isolation:isolate}
+.story-stat-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;z-index:-2}
+.story-stat:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(21,21,21,.7) 0,rgba(21,21,21,.5) 40%,rgba(21,21,21,.82) 100%)}
+.story-stat span,.story-stat small{text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.story-stat strong{text-shadow:0 2px 24px rgba(0,0,0,.55)}
+
+/* Where to Buy: each location photo sits behind its card text */
+.locations-grid .location-card{position:relative;overflow:hidden;isolation:isolate;min-height:520px;background:#151515;color:var(--cream)}
+.locations-grid .location-photo{position:absolute;inset:0;margin:0;display:block;z-index:-2;background:#151515}
+.locations-grid .location-photo img{width:100%;height:100%;aspect-ratio:auto;max-height:none;object-fit:cover;object-position:50% 50%}
+.locations-grid .location-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(21,21,21,.62) 0,rgba(21,21,21,.3) 32%,rgba(21,21,21,.88) 100%);pointer-events:none}
+.locations-grid .location-card-top{color:rgba(242,239,232,.85)}
+.locations-grid .location-card h3 em{color:#e6ad98}
+.locations-grid .location-card p,.locations-grid .location-card .hours span{color:rgba(242,239,232,.85)}
+.locations-grid .location-card .hours strong,.locations-grid .location-card .text-link{color:var(--cream)}
+.locations-grid .location-card h3,.locations-grid .location-card p,.locations-grid .location-card-top{text-shadow:0 1px 14px rgba(0,0,0,.55)}
+@media(max-width:900px){.locations-grid .location-card{min-height:460px}}
+.locations-grid .location-card:not(.location-card-feature) .text-link{margin-top:22px}
+.locations-grid .location-card .hours{margin-top:22px}
+
+/* Shop All hero: same treatment as Bulk Printing (photo, dark overlay, headline on top) */
+.shop-hero{min-height:clamp(560px,50vw,760px);display:grid;grid-template-columns:100%;align-content:end;padding-bottom:clamp(48px,6vw,90px)}
+.shop-hero .page-hero-inner{grid-template-columns:1fr;gap:18px}
+.shop-hero .hero-bg img{object-position:35% 30%}
+.shop-hero .hero-bg:after{background:linear-gradient(180deg,rgba(15,15,15,.5) 0,rgba(15,15,15,.35) 30%,rgba(15,15,15,.9) 100%),linear-gradient(90deg,rgba(15,15,15,.55),rgba(15,15,15,.2) 60%,rgba(15,15,15,.45))}
+.shop-hero .page-hero-copy{color:rgba(242,239,232,.86)}
+.shop-hero .display-xl{text-shadow:0 2px 28px rgba(0,0,0,.5)}
+@media(max-width:700px){.shop-hero{min-height:620px}.shop-hero .hero-bg img{object-position:40% 30%}.shop-hero .display-xl{font-size:clamp(2.6rem,13vw,3.6rem)}}
