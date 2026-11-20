@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop All — HANMAK Apparel</title>
+  <meta name="description" content="Explore the HANMAK Apparel catalogue of PNG streetwear designs.">
+  <meta property="og:site_name" content="HANMAK Apparel"><meta property="og:type" content="website"><meta property="og:locale" content="en"><meta property="og:title" content="Shop All — HANMAK Apparel"><meta property="og:description" content="Explore the HANMAK Apparel catalogue of PNG streetwear designs."><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Shop All — HANMAK Apparel"><meta name="twitter:description" content="Explore the HANMAK Apparel catalogue of PNG streetwear designs."><meta name="theme-color" content="#151515">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="icon" type="image/png" href="images/hanmak-icon.png">
+  <link rel="apple-touch-icon" href="images/hanmak-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="inner.css">
+</head>
+<body data-page="shop">
+  <div data-site-header></div>
+  <main>
+    <section class="page-hero page-hero-photo section-ink"><div class="hero-photo"><img src="images/photos/wear-the-whole-map.webp" alt="Four people in black and white HANMAK shirts with Port Moresby hills and harbour behind them" width="1600" height="693" fetchpriority="high" decoding="async"></div><div class="container page-hero-inner"><p class="eyebrow eyebrow-light reveal from-left">01 / The catalogue</p><h1 class="display display-xl light reveal from-left delay-1 hero-photo-h1">Wear the<br><em>whole map.</em></h1><p class="page-hero-copy reveal from-right">Twenty-two designs. One growing archive of place, pace and everyday PNG life.</p></div></section>
+    <section class="section section-cream shop-section"><div class="container">
+      <div class="shop-toolbar reveal from-left"><div class="filter-list" role="tablist" aria-label="Filter products"><button class="filter-button is-active" data-filter="all" role="tab">All Designs</button><button class="filter-button" data-filter="sepik" role="tab">Sepik Collection</button><button class="filter-button" data-filter="islands" role="tab">Islands &amp; ENB</button><button class="filter-button" data-filter="everyday" role="tab">Everyday Essentials</button></div><p class="catalog-note">10 designs / Enquiry-based ordering</p></div>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <div class="freight-note reveal from-left"><span class="note-mark">↗</span><p><strong>Before you order</strong> All online and provincial orders are processed upon confirmed payment. Out-of-town air and sea freight orders require 1+ week for printing and dispatch.</p></div>
+    </div></section>
+  </main>
+  <div data-site-footer></div>
+
+  <div class="modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-backdrop" data-close-modal></div><div class="modal-panel"><button class="modal-close" data-close-modal aria-label="Close product showcase">×</button><div id="modal-content"></div></div></div>
+  <script src="script.js"></script><script src="inner.js" defer></script>
+</body>
+</html>

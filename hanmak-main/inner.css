@@ -1,0 +1,49 @@
+/* HANMAK inner pages (Shop, Bulk Printing, Our Story, Where to Buy): motion layer.
+   Loaded only by those pages, so the homepage is not affected. Respects reduced motion. */
+@keyframes innerIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes innerShim{from{background-position:120% 0}to{background-position:-120% 0}}
+
+/* page enter / leave */
+body:not([data-page="home"]) main{animation:innerIn .7s cubic-bezier(.2,.75,.25,1) both}
+body.is-leaving main,body.is-leaving .site-footer{opacity:0;transition:opacity .22s ease}
+
+/* nav: sliding underline on hover */
+body:not([data-page="home"]) .primary-nav a:not(.header-cta){position:relative}
+body:not([data-page="home"]) .primary-nav a:not(.header-cta):after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform .35s cubic-bezier(.2,.75,.25,1)}
+body:not([data-page="home"]) .primary-nav a:not(.header-cta):hover:after,
+body:not([data-page="home"]) .primary-nav a.is-active:after{transform:scaleX(1)}
+
+/* buttons: smooth lift */
+body:not([data-page="home"]) main a[class*="btn"],
+body:not([data-page="home"]) main a[class*="button"],
+body:not([data-page="home"]) main button,
+body:not([data-page="home"]) .header-cta{transition:transform .3s cubic-bezier(.2,.75,.25,1),background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .3s ease}
+body:not([data-page="home"]) main a[class*="btn"]:hover,
+body:not([data-page="home"]) main a[class*="button"]:hover,
+body:not([data-page="home"]) main button:hover{transform:translateY(-2px)}
+body:not([data-page="home"]) main a[class*="btn"]:active,
+body:not([data-page="home"]) main a[class*="button"]:active,
+body:not([data-page="home"]) main button:active{transform:none}
+
+/* image reveal (class added by inner.js) */
+/* the clip sits on the image, not the figure, so the observer still sees the figure's box */
+.img-reveal img{clip-path:inset(0 0 100% 0);transform:scale(1.12);transition:clip-path 1.05s cubic-bezier(.65,0,.15,1),transform 1.5s cubic-bezier(.2,.75,.25,1)}
+.img-reveal.is-visible img{clip-path:inset(0);transform:scale(1)}
+.img-reveal.is-visible:hover img{transform:scale(1.04);transition-duration:1.05s,.9s}
+
+/* loading state: soft shimmer until the picture arrives (3 passes at most) */
+body:not([data-page="home"]) main figure.is-loading{background:linear-gradient(110deg,#1b1b1b 30%,#262626 45%,#1b1b1b 60%);background-size:220% 100%;animation:innerShim 1.4s linear 3}
+
+/* product cards: staggered entrance, category switch handled in inner.js */
+body[data-page="shop"] .product-card{animation-delay:calc(min(var(--i,0),9)*55ms)}
+body[data-page="shop"] .product-card .product-name,
+body[data-page="shop"] .product-card h3{transition:color .3s ease}
+
+@media(prefers-reduced-motion:reduce){
+  body:not([data-page="home"]) main{animation:none}
+  .img-reveal img{clip-path:none!important;transform:none!important;transition:none!important}
+  body.is-leaving main,body.is-leaving .site-footer{transition:none;opacity:1}
+  body:not([data-page="home"]) main figure.is-loading{animation:none}
+  body[data-page="shop"] .product-card{animation-delay:0s}
+  body:not([data-page="home"]) .primary-nav a:after{transition:none}
+}
