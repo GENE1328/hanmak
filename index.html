@@ -12,6 +12,7 @@
   <link rel="icon" type="image/png" href="images/hanmak-icon.png">
   <link rel="apple-touch-icon" href="images/hanmak-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="coming-soon.css">
 </head>
 <body data-page="home">
   <div data-site-header></div>
@@ -87,6 +88,45 @@
       </div>
     </section>
 
+    <section class="cs-section" aria-labelledby="cs-title">
+      <div class="container">
+        <div class="cs-stage reveal" data-cs>
+          <button type="button" class="cs-teaser" data-cs-open aria-expanded="false" aria-controls="cs-body">
+            <span class="cs-teaser-bg" aria-hidden="true"><img src="images/coming-soon/red-front.webp" alt="" width="838" height="1024" loading="lazy" decoding="async"><img src="images/coming-soon/black-front.webp" alt="" width="838" height="1024" loading="lazy" decoding="async"></span>
+            <span class="cs-teaser-copy">
+              <span class="eyebrow eyebrow-light">New collection / Sukundumi</span>
+              <span class="cs-title" id="cs-title">Coming<em>Soon.</em></span>
+              <span class="cs-hint"><i class="cs-pulse"></i>Tap to reveal <span aria-hidden="true">↗</span></span>
+            </span>
+          </button>
+          <div class="cs-body" id="cs-body" data-cs-body aria-hidden="true"><div class="cs-body-inner"><div class="cs-panel">
+            <div class="cs-head">
+              <div><p class="eyebrow eyebrow-light">Sukundumi collection</p><h2 class="display light">Coming <em>soon.</em></h2></div>
+              <button type="button" class="cs-close" data-cs-close aria-label="Close and go back">← Back</button>
+            </div>
+            <div class="cs-products">
+              <article class="cs-card">
+                <div class="cs-card-top"><p class="eyebrow eyebrow-light">Product 01</p><span class="cs-badge">Coming soon</span></div>
+                <h3 class="display light">Red Sukundumi</h3>
+                <div class="cs-views">
+                  <figure><img src="images/coming-soon/red-front.webp" alt="Red Sukundumi shirt, front view" width="838" height="1024" loading="lazy" decoding="async"><figcaption>Front</figcaption></figure>
+                  <figure><img src="images/coming-soon/red-back.webp" alt="Red Sukundumi shirt, back view with large mask artwork" width="698" height="1024" loading="lazy" decoding="async"><figcaption>Back</figcaption></figure>
+                </div>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card-top"><p class="eyebrow eyebrow-light">Product 02</p><span class="cs-badge">Coming soon</span></div>
+                <h3 class="display light">Black Sukundumi</h3>
+                <div class="cs-views">
+                  <figure><img src="images/coming-soon/black-front.webp" alt="Black Sukundumi shirt, front view" width="838" height="1024" loading="lazy" decoding="async"><figcaption>Front</figcaption></figure>
+                  <figure><img src="images/coming-soon/black-back.webp" alt="Black Sukundumi shirt, back view with large mask artwork" width="698" height="1024" loading="lazy" decoding="async"><figcaption>Back</figcaption></figure>
+                </div>
+              </article>
+            </div>
+          </div></div></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-ink collection-section">
       <div class="container">
         <div class="section-head reveal from-left">
@@ -138,5 +178,6 @@
   </main>
   <div data-site-footer></div>
   <script src="script.js"></script>
+  <script src="coming-soon.js" defer></script>
 </body>
 </html>
